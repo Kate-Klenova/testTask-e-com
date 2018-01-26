@@ -14,11 +14,11 @@ import java.lang.String;
  * Created by klenova on 25.01.2018.
  */
 public class PhotosPage {
-    public void  openPhotosPartitian(){
+    public void openPhotosPartitian() {
         $(By.xpath("//a[text()='Photos']")).click();
     }
 
-    public void  openConcreatePhoto(String link){
+    public void openConcreatePhoto(String link) {
         open(link);
     }
 
@@ -30,8 +30,10 @@ public class PhotosPage {
         addToBoardIcon.click();
     }
 
-    public boolean verifyPhotoAdded(java.lang.String photosInBoartNumb){
-        java.lang.String photosInBoardCounterContent = $(By.xpath("//span[@class = 'count ng-binding ng-scope']")).getText();
-       return  photosInBoardCounterContent == photosInBoartNumb;
+    public boolean verifyPhotoAdded(java.lang.String photosInBoartNumb) {
+        String photosInBoardCounterContent = $(By.xpath("//span[@class = 'count ng-binding ng-scope']")).getText();
+        return photosInBoardCounterContent == photosInBoartNumb;
     }
+
+
 }

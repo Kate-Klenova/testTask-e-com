@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeClass;
 import javax.security.auth.login.Configuration;
 
 public class BaseTest {
-    public WebDriver driver;
+    public  WebDriver driver;
     public WebDriverWait wait;
 
     @BeforeClass
@@ -21,13 +21,13 @@ public class BaseTest {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Klenova\\Documents\\chromedriver_win32\\chromedriver.exe");//"C:\\Users\\Katya\\Documents\\chromedriver_win32\\chromedriver.exe");
         System.setProperty("selenide.browser", "Chrome");
 
-        driver = new ChromeDriver();
+       // driver = new ChromeDriver();
 
         //Create a wait. All test and page classes use this wait.
-        wait = new WebDriverWait(driver,15);
+       // wait = new WebDriverWait(driver,15);
 
         //Maximize Window
-        driver.manage().window().maximize();
+       // driver.manage().window().maximize();
     }
 
     @AfterClass
